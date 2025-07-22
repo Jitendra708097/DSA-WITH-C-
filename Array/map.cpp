@@ -3,7 +3,7 @@
 using namespace std;
 int main()
 {
-    map<char,int>mp;
+    map<int,char>mp;
     mp['A'] = 1;
     mp['B'] = 11;
     mp['C'] = 12;
@@ -14,7 +14,7 @@ int main()
     mp['H'] = 17;
     
 
-    // first method to interate in map /
+    // first method to iterate on map 
 
     // why not use int instead of whole map 
     // Type Mismatch: The type of iterator for a std::map is not an integer. 
@@ -33,6 +33,13 @@ int main()
     {
         cout<<it->first<<"=>"<<it->second<<endl;
     }
+
+    cout<<"This is first method for traversing on map: "<<endl;
+
+     for(map<int,char>::iterator it=mp.begin();it!=mp.end();it++)
+     {
+        cout<<it->first<<" => "<<it->second<<endl;
+     }
 
 
 }
