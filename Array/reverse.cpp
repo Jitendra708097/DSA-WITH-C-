@@ -13,9 +13,23 @@ int main()
         cin>>arr[i];
     }
      
-    //  it print reverse element of array
-    for(int i=n-1;i>=0;i--)
+// This is a code reverse array without printing them from end;
+
+    int start = 0;
+    int end = n-1;
+    while(start<=end)
+    {
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++,end--;
+    }
+
+    cout<<"This is the reverse array: "<<endl;
+    for(int i=0;i<n;i++)
     {
         cout<<arr[i]<<" ";
     }
+
+
 }
